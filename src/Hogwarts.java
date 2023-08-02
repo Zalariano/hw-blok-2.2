@@ -1,10 +1,37 @@
 public class Hogwarts {
-    private  int magicPower;
-    private  int transgressionDistance;
-    private  String name;
-    private  String surname;
+    private int magicPower;
+    private int transgressionDistance;
+    private String name;
+    private String surname;
 
-    public Hogwarts(int magicPower, int transgressionDistance,String name,String surname) {
+    public void compareHogwartsffStudents(Hogwarts v) {
+        if (this.getMagicPower() == v.getMagicPower() && this.getTransgressionDistance() == v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " равен по силе магии и расстоянию трансгрессии с " + v.getName());
+        } else if (this.getMagicPower() == v.getMagicPower() && this.getTransgressionDistance() > v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " равен по силе магии " + v.getName() + " но его расстояние трансгрессии больше ");
+
+        } else if (this.getMagicPower() == v.getMagicPower() && this.getTransgressionDistance() < v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " равен по силе магии " + v.getName() + " но его расстояние трансгрессии меньше ");
+
+        } else if (this.getMagicPower() > v.getMagicPower() && this.getTransgressionDistance() == v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " равен по расстоянию трансгрессии с " + v.getName() + " но его сила магии больше ");
+        } else if (this.getMagicPower() < v.getMagicPower() && this.getTransgressionDistance() == v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " равен по расстоянию трансгрессии с " + v.getName() + " но его сила магии меньше ");
+
+        } else if (this.getMagicPower() > v.getMagicPower() && this.getTransgressionDistance() > v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " cильнее по всем показателям чем " + v.getName());
+        } else if (this.getMagicPower() < v.getMagicPower() && this.getTransgressionDistance() < v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " слабее по всем показателям чем " + v.getName());
+        } else if (this.getMagicPower() < v.getMagicPower() && this.getTransgressionDistance() > v.getTransgressionDistance()) {
+            System.out.println(this.getName() + " расстояние трансгрессии больше чем у " + v.getName() + " но его сила магии меньше ");
+        } else {
+            System.out.println(this.getName() + " расстояние трансгрессии меньше чем  у " + v.getName() + " но его сила магии больше ");
+        }
+
+
+    }
+
+    public Hogwarts(int magicPower, int transgressionDistance, String name, String surname) {
         this.magicPower = magicPower;
         this.transgressionDistance = transgressionDistance;
         this.name = name;
