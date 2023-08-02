@@ -77,7 +77,7 @@ public class Main {
         } else if (cedricDiggory.getMagicPower()< justinFinchFletchley.getMagicPower() && cedricDiggory.getTransgressionDistance()> justinFinchFletchley.getTransgressionDistance()) {
             System.out.println(cedricDiggory.getName() + " расстояние трансгрессии больше чем у " + justinFinchFletchley.getName() + " но его сила магии меньше ");
         }else {
-            System.out.println(cedricDiggory.getName() + " расстояние трансгрессии меньше чем у " + justinFinchFletchley.getName() + " но его сила магии больше ");
+            System.out.println(cedricDiggory.getName() + " расстояние трансгрессии меньше чем  у " + justinFinchFletchley.getName() + " но его сила магии больше ");
         }
 
 
